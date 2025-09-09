@@ -1,0 +1,19 @@
+.location-container {
+  display: flex;
+  height: 100vh;
+}
+
+.location-content {
+  flex: 1;
+  padding: 20px;
+  background: #fafafa;
+}
+
+.map-placeholder {
+  height: 400px;
+  background: #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+}

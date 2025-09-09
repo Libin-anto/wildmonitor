@@ -1,0 +1,136 @@
+/* Reset margin, padding, box-sizing globally in sidebar */
+.sidebar-root,
+.sidebar-root * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 100%;
+  overflow-x: hidden;
+  
+}
+
+.sidebar-root {
+  width: 80px;
+  transition: width 0.24s cubic-bezier(.4,0,.2,1);
+  color: #5a6ed5;
+  border: none;
+  overflow-x: hidden;
+  overflow-y: auto; /* allow vertical scroll if needed */
+  box-shadow: 2px 0 7px rgba(30,40,82,0.06);
+  z-index: 1200;
+  box-sizing: border-box;
+}
+.sidebar-root.open {
+  width: 240px;
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 18px 14px;
+  min-height: 56px;
+  max-width: 100%;
+}
+
+.sidebar-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  color: #000000;
+  letter-spacing: 1px;
+  margin-left: 10px;
+  font-size: 1.25em;
+  max-width: 100%;
+}
+
+.sidebar-list {
+  margin-top: 12px;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.sidebar-item {
+  position: relative;
+  border-radius: 8px;
+  margin: 6px 10px;
+  padding: 6px 14px;
+  transition: background 0.18s;
+  cursor: pointer;
+  color: #000000;
+  font-weight: 500;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.sidebar-item:hover,
+.sidebar-item.active {
+  background: linear-gradient(90deg, #6558f5 30%, #4fd1c5 100%);
+  color: #fff;
+  box-shadow: 0 2px 10px rgba(101,88,245,0.10);
+}
+
+.sidebar-icon {
+  min-width: 28px !important;
+  color: inherit !important;
+  max-width: 100%;
+}
+
+.sidebar-label {
+  font-weight: 500;
+  letter-spacing: .5px;
+  font-size: 1.05em;
+  color: inherit;
+  max-width: 100%;
+}
+
+.sidebar-badge {
+  background: #f63041;
+  color: #fffffff6;
+  font-size: 0.98em;
+  font-weight: bold;
+  border-radius: 16px;
+  padding: 1px 8px;
+  margin-left: 12px;
+  max-width: 100%;
+}
+
+.sidebar-profile {
+  position: absolute;
+  bottom: 24px;
+  left: 0;
+  width: 100%;
+  padding: 15px 18px 12px 18px;
+  display: flex;
+  align-items: center;
+  background: transparent;
+  color: #000000;
+  max-width: 100%;
+}
+
+.sidebar-avatar {
+  width: 42px;
+  height: 42px;
+  box-shadow: 0 2px 10px #36367233;
+  margin-right: 14px;
+  max-width: 100%;
+}
+
+.sidebar-username {
+  font-size: 1em;
+  color: #000000;
+  font-weight: 600;
+  margin-bottom: -3px;
+  max-width: 100%;
+}
+
+.sidebar-role {
+  font-size: 0.93em;
+  color: #000000;
+  font-weight: 400;
+  max-width: 100%;
+}
+
+/* Prevent page-level horizontal scroll */
+html, body {
+  overflow-x: hidden;
+}
