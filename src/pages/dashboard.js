@@ -19,9 +19,8 @@ function Dashboard() {
   };
 
   return (
-    <div className="dashboard-container">
-      <Sidebar />
-      <div className="dashboard-content">
+    <>
+      <div>
         <h2>Sanctuary Control Center</h2>
 
         {/* Cards */}
@@ -133,7 +132,7 @@ function Dashboard() {
           </table>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 
